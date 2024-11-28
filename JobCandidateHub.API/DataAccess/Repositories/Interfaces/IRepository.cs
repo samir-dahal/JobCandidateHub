@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace JobCandidateHub.API.DataAccess.Repositories
+namespace JobCandidateHub.API.DataAccess.Repositories.Interfaces
 {
     public interface IRepository<TEntity> where TEntity : class
     {

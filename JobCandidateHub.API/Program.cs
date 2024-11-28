@@ -16,6 +16,10 @@ namespace JobCandidateHub.API
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.InstallRequiredServices();
+
+            //repos are available in this unit of work
+            builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
