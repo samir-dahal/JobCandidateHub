@@ -1,3 +1,6 @@
+using JobCandidateHub.API.DataAccess;
+using JobCandidateHub.API.Installers;
+
 namespace JobCandidateHub.API
 {
     public class Program
@@ -12,7 +15,7 @@ namespace JobCandidateHub.API
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-
+            builder.InstallRequiredServices();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -26,7 +29,7 @@ namespace JobCandidateHub.API
 
 
             app.MapControllers();
-
+            app.MigrateData();//run migrations on start
             app.Run();
         }
     }
