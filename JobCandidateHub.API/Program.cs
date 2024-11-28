@@ -34,6 +34,7 @@ namespace JobCandidateHub.API
 
             app.MapControllers();
             app.MigrateData();//run migrations on start
+            app.UseCors("AllowPublicAPI"); //use the cors here to allow public api calls to this api
             app.Run();
         }
     }
