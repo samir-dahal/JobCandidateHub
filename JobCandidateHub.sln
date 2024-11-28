@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobCandidateHub.API", "JobC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobCandidateHub.API.Contracts", "JobCandidateHub.API.Contracts\JobCandidateHub.API.Contracts.csproj", "{3E5206F7-6D95-47FD-86E1-8B78DDCF3BC9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobCandidateHub.API.Tests", "JobCandidateHub.API.Tests\JobCandidateHub.API.Tests.csproj", "{03672ADE-E282-451A-8A57-9428C954B000}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3E5206F7-6D95-47FD-86E1-8B78DDCF3BC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E5206F7-6D95-47FD-86E1-8B78DDCF3BC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E5206F7-6D95-47FD-86E1-8B78DDCF3BC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03672ADE-E282-451A-8A57-9428C954B000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03672ADE-E282-451A-8A57-9428C954B000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03672ADE-E282-451A-8A57-9428C954B000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03672ADE-E282-451A-8A57-9428C954B000}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

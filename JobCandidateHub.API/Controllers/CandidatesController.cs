@@ -30,6 +30,8 @@ namespace JobCandidateHub.API.Controllers
                 return this.CreateApiResult(success: true, "Candidate signup successfull", new CandidateResponse
                 {
                     CandidateId = result.CandidateId,
+                    FirstName = result.FirstName,
+                    LastName = result.LastName,
                     Email = result.Email,
                 });
             }
