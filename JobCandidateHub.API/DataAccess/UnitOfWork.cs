@@ -12,14 +12,13 @@ namespace JobCandidateHub.API.DataAccess
         }
         public TheDbContext Context => _context;
         private ICandidateRepository _candidateRepository;
-        public ICandidateRepository StudentRepository
+        public ICandidateRepository CandidateRepository
         {
             get
             {
                 return _candidateRepository ?? (_candidateRepository = new CandidateRepository(_context));
             }
         }
-        public ICandidateRepository CandidateRepository => throw new NotImplementedException();
         public async Task SaveChangesAsync()
         {
             await _context.SaveChangesAsync();

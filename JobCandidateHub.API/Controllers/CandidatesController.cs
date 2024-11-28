@@ -19,17 +19,24 @@ namespace JobCandidateHub.API.Controllers
         [HttpPost]
         public async Task<IActionResult> CandidateSignup(CandidateRequest request)
         {
-            var (valid, message) = request.IsValid();
-            if (!valid)
+            try
             {
-                return this.CreateApiResult(success: false, message);
+                var (valid, message) = request.IsValid();
+                if (!valid)
+                {
+                    return this.CreateApiResult(success: false, message);
+                }
+                var result = await _candidateService.AddOrUpdateCandidateAsync(request.ToCandidateEntity());
+                return this.CreateApiResult(success: true, "Candidate signup successfull", new CandidateResponse
+                {
+                    CandidateId = result.CandidateId,
+                    Email = result.Email,
+                });
             }
-            var result = await _candidateService.AddOrUpdateCandidateAsync(request.ToCandidateEntity());
-            return this.CreateApiResult(success: true, "Candidate signup successfull", new CandidateResponse
+            catch(Exception ex)
             {
-                CandidateId = result.CandidateId,
-                Email = result.Email,
-            });
+                return this.CreateApiResult(success: false, "Oops! something went wrong. Please try again later.");
+            }
         }
     }
 }
